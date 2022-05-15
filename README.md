@@ -1,2 +1,2 @@
 # nightcafe-auto-liker
-program to automatically like posts on nightcafe
+program to automatically like posts on nightcafe to get credits.
