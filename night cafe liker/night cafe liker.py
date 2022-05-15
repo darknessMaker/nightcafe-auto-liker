@@ -1,8 +1,23 @@
-import pyautogui
-from time import sleep
+try:
+    [
+except:
+    os.sys("pip install pyautogui")
+        import pyautogui
+try:
+    from time import sleep
+except:
+    os.sys("pip install time")
+    from time import sleep
+try:
+    from time import sleep
+except:
+    os.sys("pip install pyautogui")
+
+    from time import sleep
+    import win32api, win32con
 confid=.975
 failStreak=0
-import win32api, win32con
+
 def click():
     win32api.SetCursorPos(position)
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN,0,0)
