@@ -3,7 +3,9 @@ program to automatically like posts on nightcafe to get credits.
 **YOU WILL NEED PYTHON INSTALLED FOR IT TO WORK+addons**
 
 https://pypi.org/project/PyAutoGUI/
+
 https://pypi.org/project/python-time/
+
 https://pypi.org/project/pywin32/
 
 
