@@ -1,0 +1,39 @@
+import pyautogui
+from time import sleep
+confid=.975
+failStreak=0
+import win32api, win32con
+def click():
+    win32api.SetCursorPos(position)
+    win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN,0,0)
+    sleep(0.01)
+    win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,0,0)
+
+
+##while True:
+##    heart_location = pyautogui.locateOnScreen('heart.png', confidence=confid)
+##    if heart_location==None:
+##        confid-=.025
+##    else:
+##        break
+while pyautogui.position()[0]>5 and pyautogui.position()[1]>5:
+    heart_location = pyautogui.locateOnScreen('heart.png', confidence=confid)
+    if heart_location!=None:
+        button_x, button_y=pyautogui.center(heart_location)
+        position=button_x, button_y
+        click()
+        print(confid)
+        failStreak=0
+    elif failStreak==15:
+        heart_location = pyautogui.locateOnScreen('explore.png', confidence=confid)
+        button_x, button_y=pyautogui.center(heart_location)
+        position=button_x, button_y
+        click()
+        failStreak=0
+    else:
+        failStreak+=1
+    heart_location = None
+    pyautogui.scroll(-470)
+    sleep(1)
+    
+exit()
