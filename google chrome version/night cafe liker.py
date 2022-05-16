@@ -1,20 +1,26 @@
 try:
     import pyautogui
-except:
+
+except ImportError:
+
     os.system("pip install pyautogui")
     import pyautogui
         
         
 try:
     from time import sleep
-except:
+
+except ImportError:
+
     os.system("pip install time")
     from time import sleep
         
         
 try:
     import win32api, win32con
-except:
+
+except ImportError:
+
     os.system("pip install pywin32")
     import win32api, win32con
 
